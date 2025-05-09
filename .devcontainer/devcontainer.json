@@ -2,7 +2,7 @@
     "name": "My ROS Dev Container",
     "dockerComposeFile": "../docker-compose.yaml",
     "service": "f1tenth_gym_ros",
-    "workspaceFolder": "/sim_ws/src/f1tenth_stanley_controller",
+    "workspaceFolder": "/sim_ws/",
     "settings": {
       "terminal.integrated.shell.linux": "/bin/bash"
     },

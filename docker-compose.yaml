@@ -1,0 +1,13 @@
+services:
+  f1tenth_gym_ros:
+    image: ninzzd/f1tenth_gym_ros:latest
+    command: ["-c", "cd /sim_ws && source install/setup.bash && ros2 launch f1tenth_gym_ros gym_bridge_launch.py"]
+    volumes:
+      - .:/sim_ws/src/f1tenth_stanley_controller
+    network_mode: host
+    ipc: host
+    privileged: true
+    environment:
+      - DISPLAY=$DISPLAY
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=all
